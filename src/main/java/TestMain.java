@@ -16,7 +16,7 @@ public class TestMain {
 		// Connection conn = DriverManager.getConnection(url, props);
 
 		
-		URI dbUri = new URI("postgres://veyaazbzjxuraq:6F2QLjGz7rUbYSUxIeJeQ3Diwm@ec2-23-23-215-150.compute-1.amazonaws.com:5432/dbgf0edbg3d0at");
+		URI dbUri = new URI("postgres://cadztsewslvlqw:ZRbo5ApnZrA1sZHnWDLM4heWtV@ec2-23-21-187-45.compute-1.amazonaws.com:5432/d487t5ar1a4pub");
 
 	    String username = dbUri.getUserInfo().split(":")[0];
 	    String password = dbUri.getUserInfo().split(":")[1];
