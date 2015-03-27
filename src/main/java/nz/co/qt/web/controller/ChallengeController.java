@@ -113,6 +113,7 @@ public class ChallengeController {
 			challengeVO.getChallenge().getChallengeDetails().setDescription("");
 		}
 
+		
 		Collection<ChallengeDetails> results = this.challengeService
 				.findChallengeDetailsByDesc(challengeVO.getChallenge()
 						.getChallengeDetails().getDescription());
