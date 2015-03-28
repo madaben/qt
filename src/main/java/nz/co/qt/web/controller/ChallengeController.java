@@ -117,14 +117,13 @@ public class ChallengeController {
 			challengeVO.getChallenge().getChallengeDetails().setDescription("");
 		}
 
-		
 		Collection<ChallengeDetails> results = this.challengeService
 				.findChallengeDetailsByDesc(challengeVO.getChallenge()
 						.getChallengeDetails().getDescription());
 		if (results.isEmpty()) {
-			result.rejectValue("challengeDetails.description", "notFound",
+			result.rejectValue("challenge.challengeDetails.description", "notFound",
 					"not found");
-			return "challenge/find-challenges";
+			return "/challenge/find-challenges";
 		} else if (results.size() == 1) {
 			ChallengeDetails challengeDetails = results.iterator().next();
 			return "redirect:/challenge/" + challengeDetails.getChallenge().getId();
