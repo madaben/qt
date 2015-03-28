@@ -23,8 +23,7 @@ public class TestMain {
 	    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 
 		
-		
-		
+				
 		String url = "jdbc:postgresql://localhost/testDB?user=postgres&password=postgres";
 		Connection conn = DriverManager.getConnection(url);
 

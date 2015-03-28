@@ -70,7 +70,8 @@ CREATE TABLE challenge_metadata_category
 
 INSERT INTO category(
             id, name, owner_id, parent_category, group_id)
-    VALUES (1, 'Animals', 0, 0, 0),
+    VALUES (0, 'Motor', 0, 0, 0),
+    (1, 'Animals', 0, 0, 0),
      (2, 'Games', 0, 0, 0),
      (3, 'Environment', 0, 0, 0),
      (4, 'Art', 0, 0, 0),
