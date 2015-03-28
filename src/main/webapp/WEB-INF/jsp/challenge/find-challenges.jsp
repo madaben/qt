@@ -15,7 +15,7 @@
 
     <h2>Find Challenges</h2>
 
-	<spring:url value="//challenge/find-challenges" var="formUrl"/>
+	<spring:url value="/challenge/find-challenges" var="formUrl"/>
     <form:form modelAttribute="challengeVO" action="${fn:escapeXml(formUrl)}" method="get" class="form-horizontal"
                id="search-challenge-form">
         <fieldset>

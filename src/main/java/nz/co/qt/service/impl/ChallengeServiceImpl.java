@@ -77,7 +77,9 @@ public class ChallengeServiceImpl implements ChallengeService {
 	@Transactional(readOnly = true)
 	public Challenge findChallengeById(Long id) throws DataAccessException {
 		Challenge challenge = dataChallengeRepository.findById(id);
-		Hibernate.initialize(challenge.getChallengeMetadata().getCategories());
+		if(challenge.getChallengeMetadata() != null){
+			Hibernate.initialize(challenge.getChallengeMetadata().getCategories());
+		}
 		return challenge;
 	}
 

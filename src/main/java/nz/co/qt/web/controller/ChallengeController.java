@@ -43,8 +43,10 @@ public class ChallengeController {
 		Challenge challenge = challengeService.findChallengeById(challengeId);
 		ChallengeVO challengeVO = new ChallengeVO();
 		challengeVO.setChallenge(challenge);
-		challengeVO.setCategoriesIDs(challenge.getChallengeMetadata()
+		if(challenge.getChallengeMetadata() != null){
+			challengeVO.setCategoriesIDs(challenge.getChallengeMetadata()
 				.getCategoriesIDs());
+		}
 
 		model.put("challengeVO", challengeVO);
 		return "challenge/viewChallenge";
@@ -57,8 +59,10 @@ public class ChallengeController {
 		Challenge challenge = challengeService.findChallengeById(challengeId);
 		ChallengeVO challengeVO = new ChallengeVO();
 		challengeVO.setChallenge(challenge);
-		challengeVO.setCategoriesIDs(challenge.getChallengeMetadata()
+		if(challenge.getChallengeMetadata() != null){
+			challengeVO.setCategoriesIDs(challenge.getChallengeMetadata()
 				.getCategoriesIDs());
+		}
 		List<Category> categories = categoryService.findAll();
 		model.put("categories", categories);
 		model.put("challengeVO", challengeVO);
@@ -123,7 +127,7 @@ public class ChallengeController {
 			return "challenge/find-challenges";
 		} else if (results.size() == 1) {
 			ChallengeDetails challengeDetails = results.iterator().next();
-			return "redirect:/challenge/" + challengeDetails.getId();
+			return "redirect:/challenge/" + challengeDetails.getChallenge().getId();
 		} else {
 			model.put("selections", results);
 			return "/challenge/challengesList";
