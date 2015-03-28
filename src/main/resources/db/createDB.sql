@@ -68,7 +68,15 @@ CREATE TABLE challenge_metadata_category
       ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
-
+INSERT INTO category(
+            id, name, owner_id, parent_category, group_id)
+    VALUES (1, 'Animals', 0, 0, 0),
+     (2, 'Games', 0, 0, 0),
+     (3, 'Environment', 0, 0, 0),
+     (4, 'Art', 0, 0, 0),
+     (5, 'Sport', 0, 0, 0),
+     (6, 'Travel', 0, 0, 0),
+     (7, 'Technology', 0, 0, 0);
 
 
 
